@@ -1,0 +1,61 @@
+>>> rmse_reduced = np.sqrt(mse_reduced)
+2671271.098030594
+
+>>> target_correlation
+PropertyValuationAmount      1.000000
+rolling_std_2_years          0.385005
+MunicipalityAverageIncome    0.148718
+MunicipalityPersonsCount     0.120596
+numberToilets                0.106681
+propertyHouseSize            0.106354
+propertySizeTotal            0.084723
+sizeGarage                   0.017774
+MunicipalityUnemployment     0.002596
+PropertyTaxRate             -0.036610
+MunicipalitySize            -0.120485
+Name: PropertyValuationAmount, dtype: float64
+
+RMSE for Lasso: 2671271.2553649493
+
+RMSE for Ridge: 2671271.106871828
+
+{'alpha': 50} 2905249.9344099322 {'alpha': 100} 2905249.935449501
+
+2671271.2553649493 2671271.106871828
+
+>>> print(lasso_coefficients)
+numberToilets                102381.809610
+MunicipalityUnemployment      61031.800531
+sizeGarage                     5388.863251
+propertyHouseSize              4747.047460
+PropertyTaxRate                 945.741066
+propertySizeTotal                18.176664
+MunicipalityAverageIncome        13.420942
+MunicipalityPersonsCount          3.376753
+rolling_std_2_years               0.848163
+MunicipalitySize               -675.632692
+dtype: float64
+
+
+>>> print(ridge_coefficients)
+numberToilets                102554.199290
+MunicipalityUnemployment      61087.860725
+sizeGarage                     5389.581214
+propertyHouseSize              4745.533072
+PropertyTaxRate                 947.296189
+propertySizeTotal                18.176881
+MunicipalityAverageIncome        13.421894
+MunicipalityPersonsCount          3.376486
+rolling_std_2_years               0.848162
+MunicipalitySize               -675.575520
+
+>>> print(metrics_df)
+   Model            MAE           MSE
+0    OLS  558082.947832  7.135689e+12
+1  Lasso  558087.330556  7.135690e+12
+2  Ridge  558083.204459  7.135689e+12
+
+
+
+
+
